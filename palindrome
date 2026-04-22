@@ -1,0 +1,23 @@
+#include <stdio.h>
+int main() {
+    int x, temp, reverse = 0, digit;
+    printf("Enter number: ");
+    scanf("%d", &x);
+   if (x < 0) 
+   {
+        printf("False\n");
+        return 0;
+    }
+
+    temp = x;
+       while (temp != 0) {
+        digit = temp % 10;
+        reverse = reverse * 10 + digit;
+        temp = temp / 10;
+    }
+  if (x == reverse)
+        printf("True\n");
+    else
+        printf("False\n");
+  return 0;
+}
